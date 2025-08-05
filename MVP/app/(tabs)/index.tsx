@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { router } from 'expo-router';
+import { Colors } from '@/constants/Colors';
 
 export default function DashboardScreen() {
   const handleLogout = () => {
@@ -44,25 +45,27 @@ export default function DashboardScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8fafc',
+    backgroundColor: Colors.sakura.lightest, // Light pink background
   },
   header: {
     padding: 24,
     paddingTop: 60,
+    backgroundColor: Colors.sakura.darkest, // Dark pink header
   },
   title: {
     fontSize: 28,
     fontWeight: 'bold',
-    color: '#1e293b',
+    color: Colors.white, // White text on dark pink
     marginBottom: 4,
   },
   subtitle: {
     fontSize: 16,
-    color: '#64748b',
+    color: Colors.white,
+    opacity: 0.9,
     marginBottom: 16,
   },
   logoutButton: {
-    backgroundColor: '#ef4444',
+    backgroundColor: Colors.white,
     borderRadius: 8,
     padding: 12,
     alignItems: 'center',
@@ -70,7 +73,7 @@ const styles = StyleSheet.create({
     minWidth: 80,
   },
   logoutText: {
-    color: '#ffffff',
+    color: Colors.sakura.darkest, // Dark pink text on white button
     fontSize: 14,
     fontWeight: '600',
   },
@@ -78,15 +81,17 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   card: {
-    backgroundColor: '#ffffff',
+    backgroundColor: Colors.white,
     borderRadius: 12,
     padding: 20,
     marginBottom: 16,
-    shadowColor: '#000',
+    shadowColor: Colors.sakura.medium,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3,
+    borderLeftWidth: 4,
+    borderLeftColor: Colors.sakura.medium, // Pink accent border
   },
   cardTitle: {
     fontSize: 18,
@@ -99,7 +104,7 @@ const styles = StyleSheet.create({
     color: '#64748b',
   },
   actionButton: {
-    backgroundColor: '#6366f1',
+    backgroundColor: Colors.sakura.medium, // Medium pink button
     borderRadius: 8,
     padding: 12,
     alignItems: 'center',

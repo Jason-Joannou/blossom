@@ -7,20 +7,26 @@ const tintColorLight = '#0a7ea4';
 const tintColorDark = '#fff';
 
 export const Colors = {
-  light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
+  // Sakura Sunset Palette
+  sakura: {
+    lightest: '#FFB3C1',  // Light pink
+    light: '#FF9AAB',     // Medium light pink
+    medium: '#FF7F9D',    // Medium pink
+    dark: '#FF5C8A',      // Dark pink
+    darkest: '#FF3A7A',   // Darkest pink
   },
-  dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
+  
+  // Alternative naming
+  primary: '#FF3A7A',     // Darkest pink as primary
+  secondary: '#FF7F9D',   // Medium pink as secondary
+  accent: '#FFB3C1',      // Light pink as accent
+  
+  // Neutral colors for text, backgrounds, etc.
+  white: '#FFFFFF',
+  black: '#000000',
+  gray: {
+    light: '#F5F5F5',
+    medium: '#CCCCCC',
+    dark: '#666666',
   },
 };

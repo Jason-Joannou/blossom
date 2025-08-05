@@ -11,6 +11,7 @@ import {
   Platform,
   ScrollView,
 } from 'react-native';
+import { Colors } from '@/constants/Colors';
 import { router } from 'expo-router';
 
 export default function SignInScreen() {
@@ -147,7 +148,7 @@ export default function SignInScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#6366f1',
+    backgroundColor: Colors.sakura.lightest, // Light pink background
   },
   scrollContainer: {
     flexGrow: 1,
@@ -161,7 +162,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontWeight: 'bold',
-    color: '#ffffff',
+    color: Colors.white,
     marginBottom: 8,
   },
   subtitle: {
@@ -170,14 +171,11 @@ const styles = StyleSheet.create({
   },
   form: {
     width: '100%',
-    backgroundColor: '#ffffff',
+    backgroundColor: Colors.white,
     borderRadius: 20,
     padding: 24,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 10,
-    },
+    shadowColor: Colors.sakura.darkest,
+    shadowOffset: { width: 0, height: 10 },
     shadowOpacity: 0.25,
     shadowRadius: 20,
     elevation: 10,
@@ -216,19 +214,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   signInButton: {
-    backgroundColor: '#6366f1',
+    backgroundColor: Colors.sakura.darkest, // Dark pink button
     borderRadius: 12,
     padding: 16,
     alignItems: 'center',
     marginTop: 8,
-    shadowColor: '#6366f1',
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 4,
   },
   buttonDisabled: {
     backgroundColor: '#9ca3af',
@@ -251,7 +241,7 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   forgotText: {
-    color: '#6366f1',
+    color: Colors.sakura.medium, // Medium pink for links
     fontSize: 14,
     fontWeight: '500',
   },
@@ -266,7 +256,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   signUpLink: {
-    color: '#6366f1',
+    color: Colors.sakura.dark, // Dark pink for sign up link
     fontSize: 14,
     fontWeight: 'bold',
   },

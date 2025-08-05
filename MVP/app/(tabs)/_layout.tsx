@@ -1,17 +1,24 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
 import { Text } from 'react-native';  // ← Add this import
+import { Colors } from '@/constants/Colors';
+
 
 
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: '#6366f1',
+        tabBarActiveTintColor: Colors.sakura.darkest,    // Active tab color
+        tabBarInactiveTintColor: Colors.gray.medium,     // Inactive tab color
+        tabBarStyle: {
+          backgroundColor: Colors.white,
+          borderTopColor: Colors.sakura.lightest,
+        },
         headerShown: false,
       }}>
       <Tabs.Screen
-        name="index"  // ← This is your HOME tab (default)
+        name="index"
         options={{
           title: 'Home',
           tabBarIcon: ({ color, focused }) => (
