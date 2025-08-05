@@ -42,7 +42,7 @@ export default function SignInScreen() {
         
         // Navigate to home screen after successful sign-in
         setTimeout(() => {
-          router.push('/home');
+          router.push('/(tabs)');
         }, 1000);
         
       } else {

@@ -1,13 +1,22 @@
-// app/(tabs)/index.tsx
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { router } from 'expo-router';
 
 export default function DashboardScreen() {
+  const handleLogout = () => {
+    router.push('/sign-in');
+  };
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>Dashboard</Text>
         <Text style={styles.subtitle}>Welcome to your main app!</Text>
+        
+        {/* Add logout button */}
+        <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
+          <Text style={styles.logoutText}>Logout</Text>
+        </TouchableOpacity>
       </View>
       
       <View style={styles.content}>
@@ -50,6 +59,20 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 16,
     color: '#64748b',
+    marginBottom: 16,
+  },
+  logoutButton: {
+    backgroundColor: '#ef4444',
+    borderRadius: 8,
+    padding: 12,
+    alignItems: 'center',
+    alignSelf: 'flex-end',
+    minWidth: 80,
+  },
+  logoutText: {
+    color: '#ffffff',
+    fontSize: 14,
+    fontWeight: '600',
   },
   content: {
     padding: 16,
